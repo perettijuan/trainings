@@ -17,4 +17,16 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <!-- Theme applicated to the action bar activities -->
+    <style name="SocialHubActionBarTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/SocialHubActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="SocialHubActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/action_bar_gradient</item>
+    </style>
+
 </resources>

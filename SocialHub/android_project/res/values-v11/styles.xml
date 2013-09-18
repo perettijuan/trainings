@@ -1,11 +1,36 @@
 <resources>
 
     <!--
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
-        <!-- API 11 theme customizations can go here. -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- Theme applicated to the action bar activities -->
+    <style name="SocialHubActionBarTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/SocialHubActionBar</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/SocialHubActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="SocialHubActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/action_bar_gradient</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/action_bar_gradient</item>
     </style>
 
 </resources>
