@@ -1,4 +1,4 @@
-package com.jpp.training.algorithm;
+package com.jpp.training.algorithm.chapter1;
 
 public class PowerCalculator {
 

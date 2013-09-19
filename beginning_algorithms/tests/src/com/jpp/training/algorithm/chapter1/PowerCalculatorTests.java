@@ -1,8 +1,10 @@
-package com.jpp.training.algorithm;
+package com.jpp.training.algorithm.chapter1;
 
 import static junit.framework.Assert.assertEquals;
 
 import org.junit.Test;
+
+import com.jpp.training.algorithm.chapter1.PowerCalculator;
 
 public class PowerCalculatorTests {
 
