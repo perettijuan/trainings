@@ -3,5 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="libs/junit-4.8.2.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/beginning_algorithm_queues"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
