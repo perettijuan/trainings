@@ -15,7 +15,7 @@ public class ListFifoQueue<T> implements Queue<T> {
         if (list == null) {
             throw new IllegalArgumentException("list parameter can not be null");
         }
-        mList = list;
+        mList = new LinkedList<T>(list);
     }
 
     public ListFifoQueue() {
