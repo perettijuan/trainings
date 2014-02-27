@@ -11,6 +11,7 @@ public class SelectionListSorter<E> implements ListSorter<E> {
     private Comparator<E> mComparator;
 
     public SelectionListSorter(Comparator<E> comp) {
+        assert comp != null : "Comparatot can not be null";
         mComparator = comp;
     }
 
