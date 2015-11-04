@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Movies Preview</string>
+
+
+    <!-- Splash Screen -->
+    <string name="remote_configuration_error">Ooops, something went wrong while retrieving information from the server. Please, try again later.</string>
+
+    <!-- Generic error -->
+    <string name="no_connectivity_error">Your device is not connected to Internet. Please, verify your connection and try again.</string>
+</resources>
