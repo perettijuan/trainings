@@ -28,7 +28,7 @@ public class MoviePage implements Parcelable {
     }
 
     private MoviePage(Parcel in) {
-        in.readTypedList(mResults, Movie.getCREATOR());
+        in.readTypedList(mResults, Movie.CREATOR);
     }
 
 

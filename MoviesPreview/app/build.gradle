@@ -48,4 +48,7 @@ dependencies {
 
     // Library for animating a RecyclerView
     compile 'jp.wasabeef:recyclerview-animators:1.2.1'
+
+    // Palette library
+    compile 'com.android.support:palette-v7:21.0.0'
 }

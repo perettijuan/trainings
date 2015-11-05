@@ -52,7 +52,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
 
     @Override
     public void onBindViewHolder(MovieViewHolder movieViewHolder, int i) {
-        if(mData != null) {
+        if (mData != null) {
             Movie movie = mData.get(i);
             movieViewHolder.bindMovieData(movie);
         }
@@ -65,6 +65,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
             count = mData.size();
         }
         return count;
+    }
+
+    public Movie getItemInPosition(int position) {
+        return mData.get(position);
     }
 
 

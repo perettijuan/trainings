@@ -5,16 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.TypedValue;
 import android.view.View;
 
 import com.jpp.mpreview.MoviePreviewApplication;
 import com.jpp.mpreview.R;
+import com.jpp.mpreview.model.Movie;
 import com.jpp.mpreview.model.MoviePage;
 import com.jpp.mpreview.model.RemoteConfiguration;
 import com.jpp.mpreview.mvp.presenter.Presenter;
@@ -109,7 +111,9 @@ public class MainScreen extends AppCompatActivity implements IRetrieveMoviesView
         mAdapter.setViewTouchListener(new IViewClickListener() {
             @Override
             public void onClick(View v, float x, float y, @Nullable View transitionView) {
-                //TODO start new screen
+                int position = rvMovies.getChildAdapterPosition(v);
+                Movie movie = mAdapter.getItemInPosition(position);
+                showMovieDetails(movie, transitionView);
             }
         });
         rvMovies.setAdapter(mAdapter);
@@ -118,6 +122,14 @@ public class MainScreen extends AppCompatActivity implements IRetrieveMoviesView
     private void retrieveMovies() {
         RemoteConfiguration configuration = getIntent().getParcelableExtra(REMOTE_CONFIGURATION_KEY);
         mPresenter.start(configuration);
+    }
+
+
+    private void showMovieDetails(Movie movie, View transitionView) {
+        Intent intent = MovieDetailScreen.movieDetail(this, movie);
+        String transitionName = getString(R.string.transition_movies_item);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, transitionView, transitionName);
+        ActivityCompat.startActivity(this, intent, options.toBundle());
     }
 
 //////////////////////////////////////////// PRESENTER INTERACTIONS ////////////////////////////////////////////////////////////

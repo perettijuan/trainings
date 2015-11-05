@@ -6,9 +6,6 @@ import android.os.Parcelable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * An abstraction that represents a Movie.
  * <br>
@@ -140,7 +137,7 @@ public class Movie implements Parcelable {
     }
 
 
-    private static final Creator<Movie> CREATOR = new Creator<Movie>() {
+    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
         @Override
         public Movie createFromParcel(Parcel in) {
             return new Movie(in);
@@ -151,10 +148,6 @@ public class Movie implements Parcelable {
             return new Movie[size];
         }
     };
-
-    public static Creator<Movie> getCREATOR() {
-        return CREATOR;
-    }
 
     @Override
     public int describeContents() {
