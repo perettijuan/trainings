@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dimen for movies recycler view -->
+    <dimen name="iv_item_movies_height">300dp</dimen>
+    <dimen name="txt_news_title_padding">6dp</dimen>
+    <dimen name="txt_news_title_padding_bottom">26dp</dimen>
+
+</resources>

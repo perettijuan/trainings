@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 import com.jpp.mpreview.Logger;
 import com.jpp.mpreview.event.EventController;
 import com.jpp.mpreview.model.Error;
-import com.jpp.mpreview.rest.IRemoteDataSource;
+import com.jpp.mpreview.datasource.IRemoteDataSource;
 
 /**
  * Definition of use case that is used to perform any use case in the application.

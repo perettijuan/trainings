@@ -5,6 +5,11 @@
     <!-- Splash Screen -->
     <string name="remote_configuration_error">Ooops, something went wrong while retrieving information from the server. Please, try again later.</string>
 
+    <!-- Movies screen -->
+    <string name="transition_movies_item">movies_image</string>
+    <string name="error_retrieving_movies">Ooops, something went wrong while retrieving the movies. Please, try again later</string>
+    <string name="popularity">Popularity: %1$s</string>
+
     <!-- Generic error -->
     <string name="no_connectivity_error">Your device is not connected to Internet. Please, verify your connection and try again.</string>
 </resources>

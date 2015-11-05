@@ -19,7 +19,8 @@ import java.util.Vector;
 public class EventController {
 
     public enum Event {
-        RETRIEVE_REMOTE_CONFIGURATION;
+        RETRIEVE_REMOTE_CONFIGURATION,
+        RETRIEVE_MOVIE_LIST;
     }
 
     // A 'bitmap' with all the listeners

@@ -31,6 +31,13 @@ public class ImagesConfiguration implements Parcelable {
         mPosterSizes = in.createStringArray();
     }
 
+    /* Default */ String getPosterImageBaseUrl() {
+        return mBaseUrl;
+    }
+
+    /* Default */ String getDefaultPosterSize() {
+        return mPosterSizes[mPosterSizes.length - 1];
+    }
 
     @Override
     public int describeContents() {

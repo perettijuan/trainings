@@ -1,6 +1,6 @@
-package com.jpp.mpreview.rest;
+package com.jpp.mpreview.datasource;
 
-import com.jpp.mpreview.rest.parser.GsonParser;
+import com.jpp.mpreview.datasource.parser.GsonParser;
 
 /**
  * Factory class used to get the proper DataSource

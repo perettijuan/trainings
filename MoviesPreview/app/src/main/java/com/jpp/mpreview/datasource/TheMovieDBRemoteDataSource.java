@@ -1,11 +1,13 @@
-package com.jpp.mpreview.rest;
+package com.jpp.mpreview.datasource;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.jpp.mpreview.Logger;
+import com.jpp.mpreview.model.GenresPage;
+import com.jpp.mpreview.model.MoviePage;
 import com.jpp.mpreview.model.RemoteConfiguration;
-import com.jpp.mpreview.rest.parser.JsonParser;
+import com.jpp.mpreview.datasource.parser.JsonParser;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,6 +48,9 @@ import java.util.Map;
     // URL paths
     private static final String BASE_URL = "http://api.themoviedb.org/3/";
     private static final String CONFIGURATION_URL = BASE_URL + "configuration";
+    private static final String MOVIE = BASE_URL + "movie/";
+    private static final String TOP_RATED = MOVIE + "top_rated";
+    private static final String GENRE_MOVIE_LIST = BASE_URL + "genre/movie/list";
 
 
     // A JsonParser
@@ -93,6 +98,28 @@ import java.util.Map;
             remoteConfiguration = PARSER.fromJson(rawResponse, RemoteConfiguration.class);
         }
         return remoteConfiguration;
+    }
+
+    @Nullable
+    @Override
+    public MoviePage getMovies() {
+        MoviePage movies = null;
+        String rawResponse = executeHttpRequest(TOP_RATED, RequestTypes.GET, getBasicQueryStringParams());
+        if (rawResponse != null) {
+            movies = PARSER.fromJson(rawResponse, MoviePage.class);
+        }
+        return movies;
+    }
+
+    @Nullable
+    @Override
+    public GenresPage getGenres() {
+        GenresPage genres = null;
+        String rawResponse = executeHttpRequest(GENRE_MOVIE_LIST, RequestTypes.GET, getBasicQueryStringParams());
+        if (rawResponse != null) {
+            genres = PARSER.fromJson(rawResponse, GenresPage.class);
+        }
+        return genres;
     }
 
     /**

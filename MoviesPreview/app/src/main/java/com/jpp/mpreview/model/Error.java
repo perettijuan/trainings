@@ -16,7 +16,8 @@ public enum Error {
 
     NONE,
     GENERIC,
-    REMOTE_CONFIG_NOT_RETRIEVED;
+    REMOTE_CONFIG_NOT_RETRIEVED,
+    MOVIES_NOT_RETRIEVED;
 
     /**
      * Verifies if the error is a network related error.

@@ -30,6 +30,10 @@ public class RemoteConfiguration implements Parcelable {
     }
 
 
+    /* Default */ ImagesConfiguration getImagesConfiguration() {
+        return mImagesConfiguration;
+    }
+
     @Override
     public int describeContents() {
         return 0;

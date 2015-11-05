@@ -3,10 +3,12 @@ package com.jpp.mpreview.mvp.presenter;
 import android.support.annotation.NonNull;
 
 import com.jpp.mpreview.event.EventController;
+import com.jpp.mpreview.model.MoviePage;
 import com.jpp.mpreview.model.RemoteConfiguration;
+import com.jpp.mpreview.mvp.view.IRetrieveMoviesView;
 import com.jpp.mpreview.mvp.view.IRetrieveRemoteConfigurationView;
-import com.jpp.mpreview.rest.DataSourceFactory;
-import com.jpp.mpreview.rest.IRemoteDataSource;
+import com.jpp.mpreview.datasource.DataSourceFactory;
+import com.jpp.mpreview.datasource.IRemoteDataSource;
 import com.jpp.mpreview.usecase.UseCase;
 import com.jpp.mpreview.usecase.UseCaseFactory;
 
@@ -19,7 +21,7 @@ public class PresenterFactory {
 
 
     /**
-     * Creates and retrieves the UseCase that will retrieve the remote conefiguration from the server.
+     * Creates and retrieves the UseCase that will retrieve the remote configuration from the server.
      *
      * @param eventController - the EventController to subscribe to events.
      * @param view            - the client IView.
@@ -31,6 +33,22 @@ public class PresenterFactory {
         IRemoteDataSource dataSource = DataSourceFactory.getRemoteDataSource();
         UseCase<Void, RemoteConfiguration> useCase = UseCaseFactory.getRemoteConfigurationUseCase(eventController, event, dataSource);
         return new RetrieveRemoteConfigurationPresenter(eventController, event, view, useCase);
+    }
+
+
+    /**
+     * Creates and retrieves the UseCase that will retrieve the Movie list from the server.
+     *
+     * @param eventController - the EventController to subscribe to events.
+     * @param view            - the client IView.
+     * @return - the newly created instance.
+     */
+    public static Presenter<RemoteConfiguration> retrieveMovieListPresenter(@NonNull EventController eventController,
+                                                                            @NonNull IRetrieveMoviesView view) {
+        EventController.Event event = EventController.Event.RETRIEVE_MOVIE_LIST;
+        IRemoteDataSource dataSource = DataSourceFactory.getRemoteDataSource();
+        UseCase<RemoteConfiguration, MoviePage> useCase = UseCaseFactory.getMoviesUseCase(eventController, event, dataSource);
+        return new RetrieveMoviesPresenter(eventController, event, view, useCase);
     }
 
 }

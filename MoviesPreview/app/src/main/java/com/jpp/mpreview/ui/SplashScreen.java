@@ -1,5 +1,6 @@
 package com.jpp.mpreview.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -57,7 +58,10 @@ public class SplashScreen extends AppCompatActivity implements IRetrieveRemoteCo
 
     @Override
     public void showRemoteConfigurationRetrieved(@NonNull RemoteConfiguration remoteConfiguration) {
-        showErrorView("DONE");
+        Intent intent = MainScreen.mainScreen(this, remoteConfiguration);
+        startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
     @Override
@@ -72,6 +76,7 @@ public class SplashScreen extends AppCompatActivity implements IRetrieveRemoteCo
 
 
     private void showErrorView(String text) {
+        pgLoadingSplash.setVisibility(View.INVISIBLE);
         Snackbar snackbar = Snackbar.make(splashRoot, text, Snackbar.LENGTH_LONG);
         snackbar.show();
     }

@@ -1,6 +1,4 @@
-package com.jpp.mpreview.rest.parser;
-
-import java.lang.reflect.Type;
+package com.jpp.mpreview.datasource.parser;
 
 /**
  * Interface that defines the signature that any JSON parser must follow.

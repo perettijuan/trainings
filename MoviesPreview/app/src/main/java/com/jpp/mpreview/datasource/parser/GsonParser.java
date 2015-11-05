@@ -1,9 +1,7 @@
-package com.jpp.mpreview.rest.parser;
+package com.jpp.mpreview.datasource.parser;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.lang.reflect.Type;
 
 /**
  * Wrapper class around the GSON library
