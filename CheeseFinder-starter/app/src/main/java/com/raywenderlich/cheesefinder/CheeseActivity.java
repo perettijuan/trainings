@@ -22,6 +22,84 @@
 
 package com.raywenderlich.cheesefinder;
 
+
+import android.view.View;
+
+import java.util.List;
+
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Cancellable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
+
 public class CheeseActivity extends BaseSearchActivity {
 
+
+    /**
+     * Creates an Observable used to 'listen' events on the search button (clicks) and triggers
+     * a search that notifies results to the subscribed emitter.
+     */
+    private Observable<String> createButtonClickObservable() {
+        return Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(final ObservableEmitter<String> e) throws Exception {
+                mSearchButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        e.onNext(mQueryEditText.getText().toString());
+                    }
+                });
+
+                e.setCancellable(new Cancellable() {
+                    @Override
+                    public void cancel() throws Exception {
+                        mSearchButton.setOnClickListener(null);
+                    }
+                });
+            }
+        });
+    }
+
+
+    
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Observable<String> observable = createButtonClickObservable();
+        observable
+                // Notify on UI thread - observeOn can be called endless times
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnNext(new Consumer<String>() {
+                    @Override
+                    public void accept(String s) throws Exception {
+                        showProgressBar();
+                    }
+                })
+                // ask the observable to execute the work in the I/O thread.
+                .observeOn(Schedulers.io())
+                .map(new Function<String, List<String>>() {
+
+                    @Override
+                    public List<String> apply(String s) throws Exception {
+                        return mCheeseSearchEngine.search(s);
+                    }
+                })
+                // events will be notified in the Main Application Thread.
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<List<String>>() {
+                    @Override
+                    public void accept(List<String> strings) throws Exception {
+                        hideProgressBar();
+                        showResult(strings);
+                    }
+                });
+    }
 }
