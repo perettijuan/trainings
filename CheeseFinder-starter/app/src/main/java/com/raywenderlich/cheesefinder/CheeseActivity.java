@@ -23,9 +23,12 @@
 package com.raywenderlich.cheesefinder;
 
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -35,6 +38,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Cancellable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
+import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
 public class CheeseActivity extends BaseSearchActivity {
@@ -66,14 +70,57 @@ public class CheeseActivity extends BaseSearchActivity {
     }
 
 
-    
+    private Observable<String> createTextChangeObservable() {
+        Observable<String> textChangedObserbable = Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(final ObservableEmitter<String> e) throws Exception {
+                final TextWatcher textWatcher = new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+                        e.onNext(s.toString());
+                    }
+                };
+                mQueryEditText.addTextChangedListener(textWatcher);
+
+                e.setCancellable(new Cancellable() {
+                    @Override
+                    public void cancel() throws Exception {
+                        mQueryEditText.removeTextChangedListener(textWatcher);
+                    }
+                });
+            }
+        });
+        return textChangedObserbable
+                // filter is an operator. Filters the items emission based on the boolean
+                // returned by Predicate.test(T)
+                .filter(new Predicate<String>() {
+                    @Override
+                    public boolean test(String s) throws Exception {
+                        return s.length() >= 2;
+                    }
+                })
+                // debounce is another operator. Waits for a specified amount of time after
+                // each item emission for another item. If no item happens to be emitted
+                // during this wait, the last item is finally emitted
+                .debounce(1000, TimeUnit.MILLISECONDS);
+    }
 
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        Observable<String> observable = createButtonClickObservable();
+        Observable<String> observable = createTextChangeObservable();
         observable
                 // Notify on UI thread - observeOn can be called endless times
                 .observeOn(AndroidSchedulers.mainThread())
