@@ -33,8 +33,8 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Cancellable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
@@ -43,6 +43,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class CheeseActivity extends BaseSearchActivity {
 
+    private Disposable mDisposable;
 
     /**
      * Creates an Observable used to 'listen' events on the search button (clicks) and triggers
@@ -120,8 +121,11 @@ public class CheeseActivity extends BaseSearchActivity {
     protected void onStart() {
         super.onStart();
 
-        Observable<String> observable = createTextChangeObservable();
-        observable
+        Observable<String> buttonClickStream = createButtonClickObservable();
+        Observable<String> textChangeStream = createTextChangeObservable();
+
+        Observable<String> observable = Observable.merge(buttonClickStream, textChangeStream);
+        mDisposable = observable
                 // Notify on UI thread - observeOn can be called endless times
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnNext(new Consumer<String>() {
@@ -148,5 +152,13 @@ public class CheeseActivity extends BaseSearchActivity {
                         showResult(strings);
                     }
                 });
+    }
+
+    @Override
+    protected void onStop() {
+        if(!mDisposable.isDisposed()) {
+            mDisposable.dispose();
+        }
+        super.onStop();
     }
 }
