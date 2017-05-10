@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <!-- width or height with match_parent does not work with ConstraintLayout
+       instead of that, use the parent property with width/height = 0 -->
+
+  <TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Test match parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/colorAccent"/>
+
+
+</android.support.constraint.ConstraintLayout>
