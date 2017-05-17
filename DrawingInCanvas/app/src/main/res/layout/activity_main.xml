@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@android:color/black"
+  android:orientation="vertical"
+  tools:context="com.example.jpp.drawingincanvas.MainActivity">
+
+  <com.example.jpp.drawingincanvas.RingImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp" />
+
+
+  <com.example.jpp.drawingincanvas.RingImageView
+    android:layout_width="100dp"
+    android:layout_height="100dp" />
+
+
+  <com.example.jpp.drawingincanvas.RingImageView
+    android:layout_width="200dp"
+    android:layout_height="200dp" />
+
+</LinearLayout>
