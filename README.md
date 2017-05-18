@@ -32,3 +32,6 @@ Some very common interview programing questions using Strings.
 
 ## trees
 Tree implementation used in some project (don't remember which one). It has a set of utils that allows traversal in different orders, insertions, deletions and more.
+
+## ConstraintLayout examples
+Examples of use of ConstraintLayout, based on this [post](http://www.uwanttolearn.com/android/constraint-layout-animations-dynamic-constraints-ui-java-hell/?utm_source=Android+Weekly&utm_campaign=6222cbbb6f-android-weekly-243&utm_medium=email&utm_term=0_4eb677ad19-6222cbbb6f-337292713)
