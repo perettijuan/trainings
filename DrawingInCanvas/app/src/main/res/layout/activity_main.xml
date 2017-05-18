@@ -8,8 +8,8 @@
   tools:context="com.example.jpp.drawingincanvas.MainActivity">
 
   <com.example.jpp.drawingincanvas.RingImageView
-    android:layout_width="40dp"
-    android:layout_height="40dp" />
+    android:layout_width="28dp"
+    android:layout_height="28dp" />
 
 
   <com.example.jpp.drawingincanvas.RingImageView
