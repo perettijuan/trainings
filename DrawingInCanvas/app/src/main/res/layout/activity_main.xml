@@ -21,4 +21,9 @@
     android:layout_width="200dp"
     android:layout_height="200dp" />
 
+  <com.example.jpp.drawingincanvas.DottedLineView
+    android:layout_width="20dp"
+    android:layout_height="100dp"
+    android:background="@color/colorAccent"/>
+
 </LinearLayout>
