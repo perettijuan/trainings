@@ -8,7 +8,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 
-public class TestExercise1 {
+public class Exercise1Test {
 
 	@Test
 	public void test1() {
