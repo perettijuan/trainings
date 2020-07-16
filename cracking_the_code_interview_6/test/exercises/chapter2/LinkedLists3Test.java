@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class LinkedList3Test {
+public class LinkedLists3Test {
 
 	// Input = 3 in 1 -> 2 -> 3 -> 4 -> 5
 	// Output = 1 -> 2 -> 4 -> 5
@@ -21,7 +21,7 @@ public class LinkedList3Test {
 		three.setNext(four);
 		four.setNext(five);
 
-		LinkedList3.deleteNodeInMiddle(three);
+		LinkedLists3.deleteNodeInMiddle(three);
 
 		assertEquals(two, one.getNext());
 		assertEquals(four, two.getNext());
@@ -43,7 +43,7 @@ public class LinkedList3Test {
 		three.setNext(four);
 		four.setNext(five);
 
-		LinkedList3.deleteNodeInMiddle(four);
+		LinkedLists3.deleteNodeInMiddle(four);
 
 		assertEquals(two, one.getNext());
 		assertEquals(three, two.getNext());
@@ -65,7 +65,7 @@ public class LinkedList3Test {
 		three.setNext(four);
 		four.setNext(five);
 
-		LinkedList3.deleteNodeInMiddle(two);
+		LinkedLists3.deleteNodeInMiddle(two);
 
 		assertEquals(three, one.getNext());
 		assertEquals(four, three.getNext());
@@ -83,7 +83,7 @@ public class LinkedList3Test {
 		one.setNext(two);
 		two.setNext(three);
 
-		LinkedList3.deleteNodeInMiddle(two);
+		LinkedLists3.deleteNodeInMiddle(two);
 
 		assertEquals(three, one.getNext());
 	}

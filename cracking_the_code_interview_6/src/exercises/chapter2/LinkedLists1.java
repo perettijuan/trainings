@@ -2,7 +2,7 @@ package exercises.chapter2;
 
 public class LinkedLists1 {
 
-	public static <T> Node<T> removeDuplicates(Node<T> head) {
+	public static <T extends Comparable<T>> Node<T> removeDuplicates(Node<T> head) {
 		if (head.getNext() == null) {
 			return head;
 		}

@@ -42,8 +42,8 @@ public class LinkedLists1Test {
 
 
 	private void test(int[] in, int[] out) {
-		Node<Integer> input = produceLinkedListFrom(in);
-		Node<Integer> expected = produceLinkedListFrom(out);
+		Node<Integer> input = LinkedListExtras.produceLinkedListFrom(in);
+		Node<Integer> expected = LinkedListExtras.produceLinkedListFrom(out);
 
 		Node<Integer> actual = LinkedLists1.removeDuplicates(input);
 
@@ -58,19 +58,4 @@ public class LinkedLists1Test {
 			currentActual = currentActual.getNext();
 		}
 	}
-
-	private Node<Integer> produceLinkedListFrom(int[] list) {
-		Node<Integer> head = new Node<Integer>(list[0]);
-		Node<Integer> current = head;
-		for (int i = 1; i < list.length; i++) {
-			if (current == null) {
-				break;
-			}
-			current.setNext(new Node<Integer>(list[i]));
-			current = current.getNext();
-		}
-
-		return head;
-	}
-
 }

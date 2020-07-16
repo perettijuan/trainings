@@ -17,9 +17,9 @@ package exercises.chapter2;
  * Question related to that idea: is Node an immutable object? ==> Answer: yes.
  *
  */
-public class LinkedList3 {
+public class LinkedLists3 {
 	
-	public static <T> void deleteNodeInMiddle(Node<T> node) {
+	public static <T extends Comparable<T>> void deleteNodeInMiddle(Node<T> node) {
 		  if (node == null) {
 		      throw new NullPointerException("node input can not be null");
 		  }
