@@ -25,6 +25,10 @@ public class Node<T> {
 		next = newNext;
 	}
 	
+	public void setValue(T value) {
+		this.value = value;
+	}
+	
 	
 
 	@SuppressWarnings("unchecked")
