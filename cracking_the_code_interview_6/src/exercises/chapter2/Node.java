@@ -40,4 +40,11 @@ public class Node<T extends Comparable<T>> {
 		}
 		return super.equals(obj);
 	}
+
+	@Override
+	public int hashCode() {
+		return value.hashCode();
+	}
+	
+	
 }
