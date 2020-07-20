@@ -1,7 +1,6 @@
 package exercises.chapter3;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
