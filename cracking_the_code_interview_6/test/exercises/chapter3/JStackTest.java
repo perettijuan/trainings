@@ -29,4 +29,28 @@ public class JStackTest {
 		}
 	}
 
+	
+	@Test
+	public void testPopAndThenPushAgain() {
+		JStack<String> stack = new JStack<>();
+		stack.push("A");
+		stack.push("C");
+		
+		assertEquals("C", stack.pop());
+		
+		stack.push("D");
+		stack.push("F");
+		stack.push("B");
+		
+		String[] expected = new String[] { "B", "F", "D", "A" };
+		String[] actual = new String[4];
+		
+		for (int i = 0; i < actual.length; i++) {
+			actual[i] = stack.pop();
+		}
+		
+		for (int i = 0; i < expected.length; i++) {
+			assertEquals(expected[i], actual[i]);
+		}
+	}
 }
