@@ -72,6 +72,8 @@ public class TraversalTest {
 		expected.add(8);
 		expected.add(5);
 		
+		System.out.println("It is " + (1 / 2));
+		
 		List<Integer> actual = new ArrayList<Integer>();
 		
 		Traversal.postOrderTraversal(tree, actual);
