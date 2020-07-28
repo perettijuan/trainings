@@ -31,6 +31,9 @@ public class JumpinOnCloudsTest {
 		int expected = 4;
 		int actual = JumpinOnClouds.jumpingOnClouds(c);
 		
+		System.out.println("Modulo = " + (11 % 3));
+		System.out.println("Div = " + (10 / 3));
+		
 		assertEquals(expected, actual);
 	}
 	
