@@ -4,9 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import hackerrank.warmup.JumpinOnClouds;
-
-
 public class HourglassTest {
 
 	/*
