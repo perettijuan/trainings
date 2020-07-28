@@ -57,34 +57,34 @@ package hackerrank.warmup;
 //Basically, what I'm doing is counting the number of times the sum changes from negative to positive.
 public class GaryTheHicker {
 	
-	static int countingValleys(int n, String s) { //10, DDDUUDUDDD
+	static int countingValleys(int n, String s) {
 	    if (n < 2 || n > Math.pow(10, 6)) {
 	        return 0;
 	    }
 
 	    // Convert the String to an array of numeric representation
 	    int[] numeric = new int[n];
-	    for (int i = 0; i < n; i++) { // DDDUUDUDDD
-	       char current = s.charAt(i); // current = U
+	    for (int i = 0; i < n; i++) { 
+	       char current = s.charAt(i);
 	       if (current == 'U') {
-	          numeric[i] = 1; // numeric {}
+	          numeric[i] = 1; 
 	       } else {
-	          numeric[i] = -1;// numeric {-1, -1, -1, 1, 1, -1, 1, -1, -1 , -1}
+	          numeric[i] = -1;
 	       }
 	    }
 
-	    //numeric {1, -1, -1, -1, 1, 1, 1, -1, -1, 1}
+	   
 	    int numberOfValleys = 0;
 	    int level = 0; // sea level
-	    for (int i = 0; i < numeric.length; i++) { // numeric {1}
-	        int current = numeric[i]; // 1
+	    for (int i = 0; i < numeric.length; i++) {
+	        int current = numeric[i];
 	    
-	        int sum = level + current; // sum = 0
+	        int sum = level + current;
 	        if (sum == 0 && level < 0) {
-	            numberOfValleys = numberOfValleys + 1; // numberOfValleys = 2
+	            numberOfValleys = numberOfValleys + 1;
 	        }
 
-	        level = level + current; // level = 0
+	        level = level + current;
 	    }
 	    
 	    // if I'm done processing and never reached 0, then it means he never came out of the valley.
