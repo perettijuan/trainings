@@ -1,13 +1,15 @@
 package helpers;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
 
-public class Helpers {
+public class HelpersTests {
 	
 	@Test
 	public void modulo() {
@@ -95,4 +97,20 @@ public class Helpers {
 		}
 	}
 
+	
+	/*
+	 * Verify if hashMap.containsKey is case sensitive.  === YESSS
+	 */
+	@Test
+	public void hashMapCaseSensitive() {
+		
+		HashMap<String, Integer> aMap = new HashMap<String, Integer>();
+		aMap.put("aString", 1);
+		
+		assertTrue(aMap.containsKey("aString"));
+		assertFalse(aMap.containsKey("astring"));
+		
+	}
+	
+	
 }
