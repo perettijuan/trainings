@@ -106,8 +106,8 @@ public class Anagrams {
 	 * one by one the results.
 	 */
 	private static boolean areAnagrams(String one, String two) {
-		char[] s1 = toChar(one);
-		char[] s2 = toChar(two);
+		char[] s1 = one.toCharArray();
+		char[] s2 = two.toCharArray();
 		
 		int n1 = s1.length;
 		int n2 = s2.length;
@@ -128,19 +128,6 @@ public class Anagrams {
 			}
 		}
 		return areAnagrams;
-	}
-	
-	/**
-	 * Convert the provided string to an array of chars.
-	 * @param s
-	 * @return
-	 */
-	private static char[] toChar(String s) {
-		char[] asChar = new char[s.length()];
-		for (int i = 0; i < s.length(); i++) {
-			asChar[i] = s.charAt(i);
-		}
-		return asChar;
 	}
 
 }
