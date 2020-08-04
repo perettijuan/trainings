@@ -1,9 +1,10 @@
-package sorting;
+package hackerrank.sorting;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import hackerrank.sorting.BubbleSort;
 import hackerrank.warmup.GaryTheHicker;
 
 public class BubbleSortTest {

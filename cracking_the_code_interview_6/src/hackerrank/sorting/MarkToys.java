@@ -1,6 +1,4 @@
-package sorting;
-
-import java.util.Arrays;
+package hackerrank.sorting;
 
 /*
  * Maximum number of toys he can buy.

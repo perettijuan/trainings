@@ -1,4 +1,4 @@
-package sorting;
+package hackerrank.sorting;
 /**
  * 8 min
  *

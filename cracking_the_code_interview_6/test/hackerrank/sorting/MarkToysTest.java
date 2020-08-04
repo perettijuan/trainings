@@ -1,8 +1,10 @@
-package sorting;
+package hackerrank.sorting;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import hackerrank.sorting.MarkToys;
 
 public class MarkToysTest {
 
