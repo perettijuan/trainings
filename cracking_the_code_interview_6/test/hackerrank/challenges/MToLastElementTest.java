@@ -1,4 +1,4 @@
-package challenges;
+package hackerrank.challenges;
 
 import static org.junit.Assert.assertEquals;
 
