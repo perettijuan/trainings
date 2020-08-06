@@ -64,6 +64,8 @@ package hackerrank.warmup;
  *       can I go i + 2 ? true (sum jump + 1; move i to i + 2) : false do the next
  *       can I go i + 1 ? true (sum jump + 1; move i to i + 1) : false fail (w/exception)
  * 3 - On every jump I have to control if I'm reaching the end.
+ * 
+ * SOLVED
  */
 public class JumpinOnClouds {
 	

@@ -25,7 +25,7 @@ import java.util.HashMap;
  *  
  *  Question: HashMap.containsKey() is case sensitive? ==> ANSWER = YES 
  *  
- *  
+ *  SOLVED
  *  TIME: 25 minutes
  */
 public class RansomNote {

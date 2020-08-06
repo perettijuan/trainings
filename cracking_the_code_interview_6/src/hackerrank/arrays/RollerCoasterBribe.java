@@ -42,6 +42,10 @@ package hackerrank.arrays;
  * 
  * 
  * THE SOLUTION: ITERATION FROM THE CURRENT POSITION TO THE END OF THE ARRAY.
+ * 
+ * SOLVED (TIME OUT)
+ * NO TIME
+ * 
  */
 public class RollerCoasterBribe {
 

@@ -55,6 +55,7 @@ package hackerrank.warmup;
 //4 - If 3 is zero and it was a negative value before the sum -> count a valley.
 //
 //Basically, what I'm doing is counting the number of times the sum changes from negative to positive.
+//SOLVED
 public class GaryTheHicker {
 	
 	static int countingValleys(int n, String s) {

@@ -25,7 +25,11 @@ package hackerrank.arrays;
  * 1 - create an array of d elements (where d is the number of rotations)
  * 2 - unload the original array in 1, until d
  * 3 - the rest of the numbers in 2, store them in the output array (from zero)
- * 4 - store the elements in 1 in 3   
+ * 4 - store the elements in 1 in 3  
+ * 
+ *  
+ * SOLVED
+ * NO TIME
  */
 public class LeftRotation {
 

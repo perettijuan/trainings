@@ -46,6 +46,9 @@ import java.util.Map;
  *   1 - Have the same length.
  *   2 - Have the same characters (the same number of times), no matter how they
  *       are positioned (?).
+ *       
+ * SOLVED (TIME OUT)
+ * NO TIME      
  *             
  */
 public class Anagrams {

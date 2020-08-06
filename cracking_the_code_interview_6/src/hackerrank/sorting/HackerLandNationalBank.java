@@ -41,6 +41,7 @@ package hackerrank.sorting;
  * 3 - If expenditures[i] >= 2xMedian ===> COUNT 
  * 
  * 
+ * SOLVED (TIME OUT)
  * TOOK ME 37 MINUTES, 
  * CODE DID NOT EXECUTE WITHIN THE TIME LIMITS
  */

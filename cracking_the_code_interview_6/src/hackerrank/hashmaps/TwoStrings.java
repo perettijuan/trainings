@@ -28,6 +28,8 @@ import java.util.HashSet;
  * 1 - Iterate over s1 and put each character in a Set.
  * 2 - Iterate over s2 and if the current character is in 1, voila!
  *
+ * SOLVED
+ * NO TIME
  */
 public class TwoStrings {
 	

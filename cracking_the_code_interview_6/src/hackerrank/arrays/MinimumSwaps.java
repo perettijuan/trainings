@@ -37,6 +37,10 @@ package hackerrank.arrays;
  *   1 - Don't get bias from the example. The algorithm might work different,
  *   	 but still provide the expected output.
  *   2 - Use the indexes along with the numbers in the array.
+ *   
+ *   
+ * SOLVED
+ * NO TIME  
  */
 public class MinimumSwaps {
 

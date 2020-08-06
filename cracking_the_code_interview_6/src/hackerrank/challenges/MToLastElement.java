@@ -32,7 +32,7 @@ import java.util.*;
  * 4 - Get from HasMap
  *
  *
- *
+ * SOLVED (TIME OUT)
  * ********************************** TOOK ME 45 MIN APROX **********************************************
  */
 public class MToLastElement {

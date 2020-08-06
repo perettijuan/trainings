@@ -1,5 +1,8 @@
 package hackerrank.warmup;
 
+/*
+ *  SOLVED
+ */
 public class RepeatedString {
 	/**
 	 * s = abcac and n = 10 ==> substring is abcacabcac

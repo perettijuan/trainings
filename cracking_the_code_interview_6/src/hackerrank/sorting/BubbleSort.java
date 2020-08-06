@@ -1,6 +1,8 @@
 package hackerrank.sorting;
 /**
- * 8 min
+ * 
+ * SOLVED
+ * Time = 8 min
  *
  */
 public class BubbleSort {

@@ -23,6 +23,10 @@ package hackerrank.arrays;
  *     		board[row][col] = row * col; 
  *     } 
  * }
+ * 
+ * 
+ * SOLVED
+ * NO TIME
  */
 public class Hourglass {
 

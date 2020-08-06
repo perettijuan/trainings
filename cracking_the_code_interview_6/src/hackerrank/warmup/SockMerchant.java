@@ -38,6 +38,7 @@ import java.util.Map;
  * 
  * Sample Output 3
  *
+ * SOLVED
  */
 public class SockMerchant {
 

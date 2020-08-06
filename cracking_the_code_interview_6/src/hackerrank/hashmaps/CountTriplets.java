@@ -85,7 +85,10 @@ import java.util.List;
  *       						2x1 = 2 | 2+2+1+1 = 6
  *       						1x1 = 1 |
  *       						1x1 = 1	|                
+ *
  *                                         
+ * FAILED
+ * NO TIME                                         
  */
 public class CountTriplets {
 

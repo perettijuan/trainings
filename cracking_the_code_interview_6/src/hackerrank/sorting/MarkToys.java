@@ -40,7 +40,7 @@ package hackerrank.sorting;
  * 						maxAmount = maxAmount + 1
  * 					}	
  * 					
- * 					
+ * SOLVED (TIME OUT)
  */
 public class MarkToys {
 	
