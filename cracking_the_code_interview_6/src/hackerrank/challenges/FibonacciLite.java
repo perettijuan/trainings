@@ -1,10 +1,6 @@
 package hackerrank.challenges;
 
 import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 /*
  *
  *  Input = 12, Output = 144
