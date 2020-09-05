@@ -40,17 +40,17 @@ public class TwoCharacters {
 	
 	static int alternate(String s) {
 		int result = 0;
-		StringBuilder sb = new StringBuilder(s);	
-		
-		ArrayList<Character> nonRepeated = findNonRepeated(s);
-		
-		for (int i = 0; i < nonRepeated.size() - 1; i++) {
-			char first = nonRepeated.get(i);			
-			for (int j = i+1; j < nonRepeated.size(); j++) {
-				char second = nonRepeated.get(j);
-							
-			}			
-		}
+//		StringBuilder sb = new StringBuilder(s);	
+//		
+//		ArrayList<Character> nonRepeated = findNonRepeated(s);
+//		
+//		for (int i = 0; i < nonRepeated.size() - 1; i++) {
+//			char first = nonRepeated.get(i);			
+//			for (int j = i+1; j < nonRepeated.size(); j++) {
+//				char second = nonRepeated.get(j);
+//							
+//			}			
+//		}
 		
 
 		return result;

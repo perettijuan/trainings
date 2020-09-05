@@ -1,7 +1,6 @@
 package hackerrank.problemsolving;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /*
  * Input = array of calories each cupcake has.
