@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct TodoeyApp: App {
+    
+    @UIApplicationDelegateAdaptor private var appDeleggate: SwiftUIAppDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
