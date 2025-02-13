@@ -14,7 +14,7 @@ struct TodoeyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
         }
     }
 }

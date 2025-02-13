@@ -11,8 +11,7 @@ import SwiftUI
 class SwiftUIAppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        print("didFinishLaunchingWithOptions")
-        TodoListManager.shared.initialize()
+        print("didFinishLaunchingWithOptions")        
         return true
     }
     

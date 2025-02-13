@@ -7,32 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		456548922D5D098200885B13 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456548912D5D098200885B13 /* Category.swift */; };
+		456548962D5D09A400885B13 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456548952D5D09A400885B13 /* CategoryRepository.swift */; };
+		456548982D5D0E0700885B13 /* CategoryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456548972D5D0E0700885B13 /* CategoryRepositoryImpl.swift */; };
+		4565489A2D5E456600885B13 /* NSTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456548992D5E456600885B13 /* NSTask.swift */; };
+		4565489C2D5E458E00885B13 /* NSCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565489B2D5E458E00885B13 /* NSCategory.swift */; };
 		457A53B02D47E9E800B80674 /* TodoeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53AF2D47E9E800B80674 /* TodoeyApp.swift */; };
-		457A53B22D47E9E800B80674 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53B12D47E9E800B80674 /* ContentView.swift */; };
+		457A53B22D47E9E800B80674 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53B12D47E9E800B80674 /* HomeScreen.swift */; };
 		457A53B42D47E9EA00B80674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457A53B32D47E9EA00B80674 /* Assets.xcassets */; };
 		457A53B72D47E9EA00B80674 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457A53B62D47E9EA00B80674 /* Preview Assets.xcassets */; };
 		457A53BE2D526FC100B80674 /* SwiftUIAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53BD2D526FC100B80674 /* SwiftUIAppDelegate.swift */; };
-		457A53C22D5271EC00B80674 /* TodoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53C12D5271EC00B80674 /* TodoListManager.swift */; };
+		457A53C22D5271EC00B80674 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53C12D5271EC00B80674 /* TasksViewModel.swift */; };
 		457A53C42D52728100B80674 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53C32D52728100B80674 /* Task.swift */; };
 		457A53C72D55154A00B80674 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457A53C52D55154A00B80674 /* DataModel.xcdatamodeld */; };
 		457A53CE2D565D3400B80674 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53CD2D565D3400B80674 /* CoreDataStorage.swift */; };
 		457A53D02D56694D00B80674 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53CF2D56694D00B80674 /* Source.swift */; };
 		457A53D32D56772400B80674 /* NSCoderStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53D22D56772400B80674 /* NSCoderStorage.swift */; };
+		457A53DB2D5A57F400B80674 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53DA2D5A57F400B80674 /* TaskView.swift */; };
+		457A53DE2D5A58BA00B80674 /* ToolbarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53DD2D5A58BA00B80674 /* ToolbarExtensions.swift */; };
+		457A53E12D5A5C0600B80674 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53E02D5A5C0600B80674 /* HomeViewModel.swift */; };
+		457A53E72D5A5DC600B80674 /* SourceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53E62D5A5DC600B80674 /* SourceRepository.swift */; };
+		457A53E92D5A5FE400B80674 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53E82D5A5FE400B80674 /* DependencyProvider.swift */; };
+		457A53EC2D5A638600B80674 /* SourceRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53EB2D5A638600B80674 /* SourceRepositoryImpl.swift */; };
+		457A53EF2D5A63F700B80674 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53EE2D5A63F700B80674 /* TaskRepository.swift */; };
+		457A53F12D5A646400B80674 /* TaskRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A53F02D5A646400B80674 /* TaskRepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		456548912D5D098200885B13 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		456548952D5D09A400885B13 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
+		456548972D5D0E0700885B13 /* CategoryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepositoryImpl.swift; sourceTree = "<group>"; };
+		456548992D5E456600885B13 /* NSTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTask.swift; sourceTree = "<group>"; };
+		4565489B2D5E458E00885B13 /* NSCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCategory.swift; sourceTree = "<group>"; };
 		457A53AC2D47E9E800B80674 /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457A53AF2D47E9E800B80674 /* TodoeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoeyApp.swift; sourceTree = "<group>"; };
-		457A53B12D47E9E800B80674 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		457A53B12D47E9E800B80674 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		457A53B32D47E9EA00B80674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457A53B62D47E9EA00B80674 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		457A53BD2D526FC100B80674 /* SwiftUIAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppDelegate.swift; sourceTree = "<group>"; };
-		457A53C12D5271EC00B80674 /* TodoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListManager.swift; sourceTree = "<group>"; };
+		457A53C12D5271EC00B80674 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		457A53C32D52728100B80674 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		457A53C62D55154A00B80674 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		457A53CD2D565D3400B80674 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		457A53CF2D56694D00B80674 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		457A53D22D56772400B80674 /* NSCoderStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCoderStorage.swift; sourceTree = "<group>"; };
+		457A53DA2D5A57F400B80674 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		457A53DD2D5A58BA00B80674 /* ToolbarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarExtensions.swift; sourceTree = "<group>"; };
+		457A53E02D5A5C0600B80674 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		457A53E62D5A5DC600B80674 /* SourceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRepository.swift; sourceTree = "<group>"; };
+		457A53E82D5A5FE400B80674 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		457A53EB2D5A638600B80674 /* SourceRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRepositoryImpl.swift; sourceTree = "<group>"; };
+		457A53EE2D5A63F700B80674 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		457A53F02D5A646400B80674 /* TaskRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +91,15 @@
 		457A53AE2D47E9E800B80674 /* Todoey */ = {
 			isa = PBXGroup;
 			children = (
-				457A53C02D5271DA00B80674 /* Models */,
+				457A53D52D5A553C00B80674 /* features */,
+				457A53E22D5A5D3400B80674 /* domain */,
+				457A53E32D5A5D4500B80674 /* data */,
 				457A53AF2D47E9E800B80674 /* TodoeyApp.swift */,
 				457A53BF2D5271D200B80674 /* Views */,
 				457A53B32D47E9EA00B80674 /* Assets.xcassets */,
 				457A53B52D47E9EA00B80674 /* Preview Content */,
 				457A53BD2D526FC100B80674 /* SwiftUIAppDelegate.swift */,
+				457A53E82D5A5FE400B80674 /* DependencyProvider.swift */,
 			);
 			path = Todoey;
 			sourceTree = "<group>";
@@ -86,21 +115,9 @@
 		457A53BF2D5271D200B80674 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				457A53B12D47E9E800B80674 /* ContentView.swift */,
+				457A53DD2D5A58BA00B80674 /* ToolbarExtensions.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		457A53C02D5271DA00B80674 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				457A53D12D56770D00B80674 /* NSCoder */,
-				457A53C12D5271EC00B80674 /* TodoListManager.swift */,
-				457A53C32D52728100B80674 /* Task.swift */,
-				457A53CC2D565D1300B80674 /* CoreData */,
-				457A53CF2D56694D00B80674 /* Source.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		457A53CC2D565D1300B80674 /* CoreData */ = {
@@ -116,8 +133,86 @@
 			isa = PBXGroup;
 			children = (
 				457A53D22D56772400B80674 /* NSCoderStorage.swift */,
+				456548992D5E456600885B13 /* NSTask.swift */,
+				4565489B2D5E458E00885B13 /* NSCategory.swift */,
 			);
 			path = NSCoder;
+			sourceTree = "<group>";
+		};
+		457A53D52D5A553C00B80674 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				457A53DF2D5A59C500B80674 /* Home */,
+				457A53D92D5A57E600B80674 /* Tasks */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		457A53D92D5A57E600B80674 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				457A53C12D5271EC00B80674 /* TasksViewModel.swift */,
+				457A53DA2D5A57F400B80674 /* TaskView.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		457A53DF2D5A59C500B80674 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				457A53B12D47E9E800B80674 /* HomeScreen.swift */,
+				457A53E02D5A5C0600B80674 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		457A53E22D5A5D3400B80674 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				457A53E52D5A5D9C00B80674 /* repository */,
+				457A53E42D5A5D9000B80674 /* model */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		457A53E32D5A5D4500B80674 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				457A53EA2D5A637500B80674 /* repository */,
+				457A53CC2D565D1300B80674 /* CoreData */,
+				457A53D12D56770D00B80674 /* NSCoder */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		457A53E42D5A5D9000B80674 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				457A53C32D52728100B80674 /* Task.swift */,
+				457A53CF2D56694D00B80674 /* Source.swift */,
+				456548912D5D098200885B13 /* Category.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		457A53E52D5A5D9C00B80674 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				457A53E62D5A5DC600B80674 /* SourceRepository.swift */,
+				457A53EE2D5A63F700B80674 /* TaskRepository.swift */,
+				456548952D5D09A400885B13 /* CategoryRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		457A53EA2D5A637500B80674 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				457A53EB2D5A638600B80674 /* SourceRepositoryImpl.swift */,
+				457A53F02D5A646400B80674 /* TaskRepositoryImpl.swift */,
+				456548972D5D0E0700885B13 /* CategoryRepositoryImpl.swift */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,14 +285,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4565489C2D5E458E00885B13 /* NSCategory.swift in Sources */,
+				457A53EF2D5A63F700B80674 /* TaskRepository.swift in Sources */,
+				457A53E92D5A5FE400B80674 /* DependencyProvider.swift in Sources */,
+				456548922D5D098200885B13 /* Category.swift in Sources */,
 				457A53D02D56694D00B80674 /* Source.swift in Sources */,
+				456548982D5D0E0700885B13 /* CategoryRepositoryImpl.swift in Sources */,
 				457A53D32D56772400B80674 /* NSCoderStorage.swift in Sources */,
-				457A53B22D47E9E800B80674 /* ContentView.swift in Sources */,
-				457A53C22D5271EC00B80674 /* TodoListManager.swift in Sources */,
+				457A53B22D47E9E800B80674 /* HomeScreen.swift in Sources */,
+				457A53C22D5271EC00B80674 /* TasksViewModel.swift in Sources */,
 				457A53C42D52728100B80674 /* Task.swift in Sources */,
+				457A53DE2D5A58BA00B80674 /* ToolbarExtensions.swift in Sources */,
 				457A53C72D55154A00B80674 /* DataModel.xcdatamodeld in Sources */,
+				457A53EC2D5A638600B80674 /* SourceRepositoryImpl.swift in Sources */,
 				457A53BE2D526FC100B80674 /* SwiftUIAppDelegate.swift in Sources */,
+				4565489A2D5E456600885B13 /* NSTask.swift in Sources */,
+				457A53E12D5A5C0600B80674 /* HomeViewModel.swift in Sources */,
+				456548962D5D09A400885B13 /* CategoryRepository.swift in Sources */,
 				457A53CE2D565D3400B80674 /* CoreDataStorage.swift in Sources */,
+				457A53E72D5A5DC600B80674 /* SourceRepository.swift in Sources */,
+				457A53F12D5A646400B80674 /* TaskRepositoryImpl.swift in Sources */,
+				457A53DB2D5A57F400B80674 /* TaskView.swift in Sources */,
 				457A53B02D47E9E800B80674 /* TodoeyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

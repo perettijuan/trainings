@@ -8,7 +8,7 @@
 import Foundation
 
 // This should be separated in different layers
-class Task : Identifiable, Codable {
+class Task : Identifiable {
     
     init(id: String, title: String, isSelected: Bool) {
         self.id = id

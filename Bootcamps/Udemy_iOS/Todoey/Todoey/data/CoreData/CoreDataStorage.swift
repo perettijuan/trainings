@@ -21,11 +21,43 @@ class CoreDataStorage {
         }
     }
     
-    func saveTask(task: Task) {
-        task.toDataEntity(context: container.viewContext).save(context: container.viewContext)
+    func saveCategory(category: Category) {
+        category
+            .toDataEntity(context: container.viewContext)
+            .save(context: container.viewContext)
     }
     
-    func loadAll() -> [Task]? {
+    func loadCategories() -> [Category]? {
+        var categories: [Category]?
+        let request: NSFetchRequest<CategoryEntity> = CategoryEntity.fetchRequest()
+        do {
+            try categories = container.viewContext.fetch(request).map({ category in
+                category.toDomain()
+            })
+        } catch {
+            print("Error retrieving categories \(error)")
+        }
+        return categories
+    }
+    
+    func load(uuid: UUID) -> Category? {
+        let request: NSFetchRequest<CategoryEntity> = CategoryEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "id = %@", uuid.uuidString)
+        let result =  try? container.viewContext.fetch(request)
+        if result?.count == 1 {
+            return result![0].toDomain()
+        } else {
+            return nil
+        }
+    }
+    
+    func saveTask(task: Task) {
+        task
+            .toDataEntity(context: container.viewContext)
+            .save(context: container.viewContext)
+    }
+    
+    func loadTasks() -> [Task]? {
         var tasks: [Task]?
         let request: NSFetchRequest<TaskEntity> = TaskEntity.fetchRequest()
         do {
@@ -38,7 +70,7 @@ class CoreDataStorage {
         return tasks
     }
     
-    func update(task: Task) -> Bool {
+    func updateTask(task: Task) -> Bool {
         if let storedTask = getWith(id: task.id) {
             storedTask.setValue(task.id, forKey: "id")
             storedTask.setValue(task.title, forKey: "title")
@@ -102,6 +134,36 @@ private extension TaskEntity {
             try context.save()
         } catch {
             print("Error deleting context \(error)")
+        }
+    }
+}
+
+private extension Category {
+    func toDataEntity(context: NSManagedObjectContext) -> CategoryEntity {
+        let category = CategoryEntity(context: context)
+        category.id = self.id.uuidString
+        category.name = self.categoryTitle
+        return category
+    }
+}
+
+private extension CategoryEntity {
+    func toDomain() -> Category {
+        let mappedId = if let safeId = id {
+            UUID(uuidString: safeId)
+        } else {
+            UUID()
+        }
+        
+        return Category(id: mappedId!, categoryTitle: self.name ?? "Unknown")
+    }
+    
+    
+    func save(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving context \(error)")
         }
     }
 }
